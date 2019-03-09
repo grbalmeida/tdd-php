@@ -97,7 +97,7 @@ class RomanNumberConverterTest extends PHPUnit
         $this->assertEquals(13, $number);
     }
 
-    public function testShouldUnderstandSymbol(): void
+    public function testShouldUnderstandSymbolXVIII(): void
     {
         $romanNumberConverter = new RomanNumberConverter();
         $number = $romanNumberConverter->convert('XVIII');
