@@ -8,146 +8,136 @@ use CDC\Examples\RomanNumberConverter;
 
 class RomanNumberConverterTest extends \CDC\Store\Test\TestCase
 {
+    private $romanNumberConverter;
+
+    public function setUp(): void
+    {
+        $this->romanNumberConverter = new RomanNumberConverter();
+        parent::setUp();
+    }
+
     public function testShouldUnderstandSymbolI(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('I');
+        $number = $this->romanNumberConverter->convert('I');
         
         $this->assertEquals(1, $number);
     }
 
     public function testShouldUnderstandSymbolV(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('V');
+        $number = $this->romanNumberConverter->convert('V');
 
         $this->assertEquals(5, $number);
     }
 
     public function testShouldUnderstandSymbolX(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('X');
+        $number = $this->romanNumberConverter->convert('X');
 
         $this->assertEquals(10, $number);
     }
 
     public function testShouldUnderstandSymbolL(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('L');
+        $number = $this->romanNumberConverter->convert('L');
 
         $this->assertEquals(50, $number);
     }
 
     public function testShouldUnderstandSymbolC(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('C');
+        $number = $this->romanNumberConverter->convert('C');
 
         $this->assertEquals(100, $number);
     }
 
     public function testShouldUnderstandSymbolD(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('D');
+        $number = $this->romanNumberConverter->convert('D');
 
         $this->assertEquals(500, $number);
     }
 
     public function testShouldUnderstandSymbolM(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('M');
+        $number = $this->romanNumberConverter->convert('M');
 
         $this->assertEquals(1000, $number);
     }
 
     public function testShouldUnderstandSymbolII(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('II');
+        $number = $this->romanNumberConverter->convert('II');
 
         $this->assertEquals(2, $number);
     }
 
     public function testShouldUnderstandSymbolVI(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('VI');
+        $number = $this->romanNumberConverter->convert('VI');
 
         $this->assertEquals(6, $number);
     }
 
     public function testShouldUnderstandSymbolVIII(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('VIII');
+        $number = $this->romanNumberConverter->convert('VIII');
 
         $this->assertEquals(8, $number);
     }
 
     public function testShouldUnderstandSymbolXIII(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('XIII');
+        $number = $this->romanNumberConverter->convert('XIII');
 
         $this->assertEquals(13, $number);
     }
 
     public function testShouldUnderstandSymbolXVIII(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('XVIII');
+        $number = $this->romanNumberConverter->convert('XVIII');
         
         $this->assertEquals(18, $number);
     }
 
     public function testShouldUnderstandSymbolXXII(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('XXII');
+        $number = $this->romanNumberConverter->convert('XXII');
 
         $this->assertEquals(22, $number);
     }
 
     public function testShouldUnderstandSymbolIV(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('IV');
+        $number = $this->romanNumberConverter->convert('IV');
 
         $this->assertEquals(4, $number);
     }
 
     public function testShouldUnderstandSymbolIX(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('IX');
+        $number = $this->romanNumberConverter->convert('IX');
 
         $this->assertEquals(9, $number);
     }
 
     public function testShouldUnderstandSymbolXXIV(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('XXIV');
+        $number = $this->romanNumberConverter->convert('XXIV');
 
         $this->assertEquals(24, $number);
     }
 
     public function testShouldUnderstandSymbolDXLIX(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('DXLIX');
+        $number = $this->romanNumberConverter->convert('DXLIX');
 
         $this->assertEquals(549, $number);
     }
 
     public function testShouldUnderstandMDXXVIII(): void
     {
-        $romanNumberConverter = new RomanNumberConverter();
-        $number = $romanNumberConverter->convert('MDXXVIII');
+        $number = $this->romanNumberConverter->convert('MDXXVIII');
 
         $this->assertEquals(1528, $number);
     }
