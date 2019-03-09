@@ -31,11 +31,11 @@ class ShoppingCart
             return 0;
         }
 
-        $highestValue = $this->getProducts()[0]->getValue();
+        $highestValue = $this->getProducts()[0]->getUnitaryValue();
 
         foreach ($this->getProducts() as $product) {
-            if ($highestValue < $product->getValue()) {
-                $highestValue = $product->getValue();
+            if ($highestValue < $product->getUnitaryValue()) {
+                $highestValue = $product->getUnitaryValue();
             }
         }
 

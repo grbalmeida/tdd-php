@@ -5,12 +5,14 @@ namespace CDC\Store\Product;
 class Product
 {
     private $name;
-    private $value;
+    private $unitaryValue;
+    private $quantity;
     
-    public function __construct(string $name, float $value)
+    public function __construct(string $name, int $quantity, float $unitaryValue)
     {
         $this->name = $name;
-        $this->value = $value;
+        $this->quantity = $quantity;
+        $this->unitaryValue = $unitaryValue;
     }
 
     public function getName(): string
@@ -18,8 +20,18 @@ class Product
         return $this->name;
     }
 
-    public function getValue(): float
+    public function getUnitaryValue(): float
     {
-        return $this->value;
+        return $this->unitaryValue;
+    }
+
+    public function getQuantity(): int
+    {
+        return $this->quantity;
+    }
+
+    public function getAmount(): float
+    {
+        return $this->unitaryValue * $this->quantity;
     }
 }

@@ -13,11 +13,11 @@ class HigherAndLower
     public function find(ShoppingCart $shoppingCart): void
     {
         foreach ($shoppingCart->getProducts() as $product) {
-            if (empty($this->lower) || $product->getValue() < $this->lower->getValue()) {
+            if (empty($this->lower) || $product->getUnitaryValue() < $this->lower->getUnitaryValue()) {
                 $this->lower = $product;
             }
 
-            if (empty($this->higher) || $product->getValue() > $this->higher->getValue()) {
+            if (empty($this->higher) || $product->getUnitaryValue() > $this->higher->getUnitaryValue()) {
                 $this->higher = $product;
             }
         }

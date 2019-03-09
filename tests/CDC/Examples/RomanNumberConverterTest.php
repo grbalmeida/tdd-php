@@ -5,9 +5,8 @@ namespace CDC\Examples;
 require './vendor/autoload.php';
 
 use CDC\Examples\RomanNumberConverter;
-use PHPUnit_Framework_TestCase as PHPUnit;
 
-class RomanNumberConverterTest extends PHPUnit
+class RomanNumberConverterTest extends \CDC\Store\Test\TestCase
 {
     public function testShouldUnderstandSymbolI(): void
     {
